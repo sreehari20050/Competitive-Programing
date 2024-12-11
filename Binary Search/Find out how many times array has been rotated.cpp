@@ -1,3 +1,20 @@
+//Solution 1
+
+#include <bits/stdc++.h>
+int findKRotation(vector<int> &arr){
+    int n = arr.size(); //size of array.
+    int ans = INT_MAX; 
+    int index = -1;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] < ans) {
+            ans = arr[i];
+            index = i;
+        }
+    }
+    return index;    
+}
+
+//Solution 2
 #include <bits/stdc++.h>
 int findKRotation(vector<int> &arr){
     int low = 0, high = arr.size() - 1;
